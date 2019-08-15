@@ -1,0 +1,28 @@
+<input
+  #input
+  class="input"
+  readonly
+  placeholder="Select value"
+  [ngModel]="value"
+  (click)="onClick()"
+  (keydown.arrowDown.prevent)="onInputArrowDown()"
+>
+<div
+  *ngIf="opened"
+  class="dropdown"
+  (mouseleave)="input.focus()"
+>
+  <div
+    *ngFor="let item of items; let index = index"
+    #option
+    class="option"
+    tabindex="-1"
+    [eventFilters]="optionFilters"
+    (mousemove.filtered)="option.focus()"
+    (keydown.arrowDown.filtered.prevent)="onArrowDown(index)"
+    (keydown.arrowUp.filtered.prevent)="onArrowUp(index)"
+    (click)="onSelect(item, input)"
+  >
+    {{item}}
+  </div>
+</div>
