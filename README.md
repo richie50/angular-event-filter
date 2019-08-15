@@ -4,7 +4,9 @@ Optimizing Events handling in Angular
 This code is by the courtesy of Alexander Inkin
 
 #Angular 7 
+
 npm -install
+
 npm run start
 
 #Angular 8 > 
