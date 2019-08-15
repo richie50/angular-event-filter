@@ -5,7 +5,7 @@ This code is by the courtesy of Alexander Inkin
 
 # Angular 7 
 
-npm -install
+npm install
 
 npm run start
 
